@@ -1,8 +1,8 @@
 #include <stdio.h>
-// 어려웠던 문
+
 int main(void)
 {
-    int n, r, sum = 0;
+    int n, r, sum;
 
     scanf("%d", &n);
     while (n >= 10) // 중요점; 10이 넘는 경우 루프 돌림
