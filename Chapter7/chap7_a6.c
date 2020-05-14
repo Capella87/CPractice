@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int x[SIZE], count = 0;
+    int x[SIZE], count = 0, i;
 
     for (i = 0; i < SIZE; i++)
         scanf("%d", &x[i]);
