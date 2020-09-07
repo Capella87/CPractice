@@ -1,29 +1,22 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <string.h>
 
 int main(void)
 {
-    char ch[20];
+    char input[20];
     int count = 0;
-    char input;
-    int pos = 0;
-    bool flag = false;
-
-    while (1)
+    char ch;
+    while (count < 20)
     {
-        scanf("%c", &input);
-        if (input == '\n') break;
-        *(ch + count) = input;
-        if (input == '#' && !flag)
-        {
-            pos = count;
-            flag = true;
+        ch = getchar();
+        if (ch == '#')
             break;
-        }
+        *(input + count) = ch;
         count++;
     }
-    for (int i = pos - 1; i >= 0; i--)
-        printf("%c", *(ch +i));
+    for (int i = count - 1; i >= 0; i--)
+        putchar(*(input + i));
     putchar('\n');
+    
     return 0;
 }
