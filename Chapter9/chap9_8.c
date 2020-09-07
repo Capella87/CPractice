@@ -1,29 +1,31 @@
 #include <stdio.h>
+#define MAX 50
 
 void swap(int*, int*);
 
 int main(void)
 {
-    int n, *a = NULL, *b = NULL, i, j;
-    int arr[50];
-    int* ptr;
+    int n;
+    int arr[MAX];
+    // 일단 50으로 정의하지만, VLA; Variable Length Array;가변길이배열; 를 통해 선언하거나 (C99; VS는 지원하지 않음), 동적 할당으로 n만큼만 할당 할 수 있다.
+    int* pos = arr;
+    int src, dest;
 
     scanf("%d", &n);
-    for (ptr = arr; ptr < arr + n; ptr++)
-        scanf("%d", ptr);
-    scanf("%d %d", &i, &j);
-    a = arr + i, b = arr + j;
-    swap(a, b);
-    for (ptr = arr; ptr < arr + n; ptr++)
-        printf(" %d", *ptr);
+    for (; pos < arr + n; pos++)
+        scanf("%d", pos);
+    scanf("%d %d", &src, &dest);
+    swap(arr + src, arr + dest);
+    for (pos = arr; pos < arr + n; pos++)
+        printf(" %d", *pos);
     putchar('\n');
     return 0;
 }
 
-void swap(int* first, int* second)
+void swap(int* from, int* to)
 {
     int temp;
-    temp = *first;
-    *first = *second;
-    *second = temp;
+    temp = *from;
+    *from = *to;
+    *to = temp;
 }
