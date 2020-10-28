@@ -2,4 +2,8 @@
 /cmake-build-debug/
 /.idea/
 /bin/
+/.vscode/
 *.swp
+*.swo
+*.exe
+*.out
