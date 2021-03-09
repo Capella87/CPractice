@@ -3,6 +3,7 @@
 int main(void)
 {
     int n;
+    
     scanf("%d", &n);
     while (n > 1 && n % 3 != 0)
     {
@@ -21,4 +22,6 @@ int main(void)
         }
         scanf("%d", &n);
     }
+
+    return 0;
 }

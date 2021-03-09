@@ -6,11 +6,10 @@ int main(void)
 
     scanf("%d", &n);
 
-    while (n != 0)
-    {
+    while (n /= 10)
         total += n % 10;
-        n /= 10;
-    }
+
     printf("%d\n", total);
+    
     return 0;
 }
