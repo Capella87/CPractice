@@ -8,9 +8,9 @@ int main(void)
     scanf("%d", &t);
     scanf("%d", &input);
 
-    while (input != 0)
+    while (input)
     {
-        while (input != 0)
+        while (input /= 10)
         {
             if (input % 10 == t)
                 cnt1++;
@@ -18,10 +18,10 @@ int main(void)
                 cnt2++;
             else if (input % 10 > t)
                 cnt3++;
-            input /= 10;
         }
         scanf("%d", &input);
     }
     printf("%d %d %d", cnt1, cnt2, cnt3);
+    
     return 0;
 }

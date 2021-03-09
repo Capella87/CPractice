@@ -12,7 +12,7 @@ int main(void)
             printf(" ");
         for (int k = 0; k < 2 * i + 1; k++)
             printf("*");
-        printf("\n");
+        putchar('\n');
     }
     for (int i = 0; i < n - 1; i++)
     {
@@ -20,7 +20,8 @@ int main(void)
             printf(" ");
         for (int k = 0; k < 2 * (n - i - 1) - 1; k++) // 밑으로 내려갈 수록 *가 줄어들어야 한다; 마지막에 -1은 홀수개로 나오기 위함
             printf("*");
-        printf("\n");
+        putchar('\n');
     }
+    
     return 0;
 }
